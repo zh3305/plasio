@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 	<head>
 		<title>plas.io</title>
 		<meta charset="utf-8">
@@ -13,7 +13,7 @@
 		<div class="fullscreen">
 			<div class="title">
 				<div class="name">plas.io</div>
-				<div id="no-support">Sorry, your browser does not support WebGL. <a href="http://get.webgl.org">Find out more</a>.</div>
+				<div id="no-support">抱歉,您的浏览器不支持WebGL。<a href="http://get.webgl.org">了解更多</a>。</div>
 			</div>
 		</div>
 		<div id="progressBar" style="display: none">
@@ -21,7 +21,7 @@
 
 		<div class="drag-and-drop" style="display: none">
 			<div class="title">
-				Drop Here!
+				拖放到这里!
 			</div>
 		</div>
 		<div class="ui-layout-center">
@@ -36,67 +36,60 @@
 			<div id="mainActions">
 				<div class="title">
 					<h1>plas.io</h1>
-					<a href="https://github.com/verma/plasio"><img style="position: absolute; top: 0; right: 0; border: 0; width:128px; height: 128px;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+					<a href="https://github.com/verma/plasio"><img style="position: absolute; top: 0; right: 0; border: 0; width:128px; height: 128px;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="在GitHub上Fork" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 				</div>
 				<div class="section">
 					<div id="webglinfo" style="display: none"> </div>
 					<div class="p-head">
-						<h3>File</h3>
+						<h3>文件</h3>
 					</div>
 					<div class="p-body">
 						<div id="naclerror" style="display: none"> </div>
 						<div class="labeled-controls">
 							<a class='doc-tag' href="docs/open-a-file.json"><span class="glyphicon glyphicon-question-sign"></span></a>
-							<h4>Choose data to display</h4>
-							<h5>Pick your own or click the dropdown for some examples</h5>
+							<h4>选择要显示的数据</h4>
+							<h5>选择您自己的文件或点击下拉菜单查看示例</h5>
 							<div class="btn-group btn-block" id="browseCancel" style="display: none">
-								<button type="button" class="btn btn-default btn-sm">Cancel</button>
+								<button type="button" class="btn btn-default btn-sm">取消</button>
 							</div>
 							<div class="btn-group btn-block" id="browse">
 								<button type="button" class="btn btn-default btn-sm btn-file dropdown-lead">
-									Browse
+									浏览
 								</button>
 								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 									<span class="caret"></span>
-									<span class="sr-only">Toggle Dropdown</span>
+									<span class="sr-only">切换下拉菜单</span>
 								</button>
 								<ul class="dropdown-menu btn-block" role="menu">
-									<li><a href="data/st-helens.laz">St. Helens</a></li>
-									<li><a href="data/half-dome.laz">Half Dome</a></li>
-									<li><a href="data/autzen.laz">Autzen Stadium</a></li>
-									<li><a href="data/spaceshuttle.laz">Space Shuttle</a></li>
-									<li><a href="data/jack.laz">Jack : The Giant Slayer</a></li>
-									<li><a href="data/mapserver-family-portrait.laz">Mapserver Family Potrait</a></li>
-									<li><a href="data/iowa-bridge.laz">Cedar Falls, IA University Ave</a></li>
+									<li><a href="data/st-helens.laz">圣海伦斯山</a></li>
+									<li><a href="data/half-dome.laz">半穹顶</a></li>
+									<li><a href="data/autzen.laz">奥茨恩体育场</a></li>
+									<li><a href="data/spaceshuttle.laz">航天飞机</a></li>
+									<li><a href="data/jack.laz">巨人杀手杰克</a></li>
+									<li><a href="data/mapserver-family-portrait.laz">地图服务器全家福</a></li>
+									<li><a href="data/iowa-bridge.laz">爱荷华锡达福尔斯大学大道</a></li>
 								</ul>
 							</div>
 							<div id="loadingStatus" class="pull-left"></div>
 							<div id="creditsLink">
-								<a data-toggle="modal" href="#" data-target="#creditsPage">Data Credits</a>
+								<a data-toggle="modal" href="#" data-target="#creditsPage">数据来源</a>
 							</div>
-							<!--
-                            <div id="gh-container">
-							<h5>Open a Greyhound Source</h5>
-                            <div id="openGreyhoundButton"></div>
-                            </div>
-                            -->
 						</div>
 
 						<div class="labeled-controls">
 							<a class='doc-tag' href="docs/density.json"><span class="glyphicon glyphicon-question-sign"></span></a>
-							<h4>Density</h4>
-							<h5>Set the load density. Smaller values load and display faster.
-							 Reopen the file to load at new density.</h5>
+							<h4>密度</h4>
+							<h5>设置加载密度。较小的值加载和显示更快。重新打开文件以新密度加载。</h5>
 							<div id="loadFidelity"></div>
 						</div>
 						<div id="loadError"></div>
 						<div class="props" style="display:none">
 							<div class="labeled-controls">
-								<h4>Data Set</h4>
-								<h5 class='switch-inst'>Switch between multiple data-sets</h5>
+								<h4>数据集</h4>
+								<h5 class='switch-inst'>在多个数据集之间切换</h5>
 								<div id="multi-files"></div>
 								<div class="auto-play" style="display: none">
-									<h5>Adjust the slider to auto-switch the files</h5>
+									<h5>调整滑块以自动切换文件</h5>
 									<div id="playback-rate"></div>
 									<div id='playback-fps'></div>
 								</div>
@@ -106,18 +99,18 @@
 						</div>
 
 						<div class="labeled-controls">
-							<h4>For scale objects</h4>
+							<h4>比例参考物</h4>
 							<a class='doc-tag' href="docs/for-scale-objects.json"><span class="glyphicon glyphicon-question-sign"></span></a>
-							<h5>Place the <span class='noun'>Empire State Building</span> by ALT (OPTION on Mac OS X) + Double-Clicking anywhere on the point cloud.</h5>
-							<button type="button" class="btn btn-sm btn-default btn-block" id="scale-geoms-clear">Clear All Objects</button>
-							<h5 class='not-first'>Change your world units so that for-scale object sizes are still relevant</h5>
+							<h5>按住ALT键(Mac OS X上为OPTION键)并在点云上双击任意位置放置<span class='noun'>帝国大厦</span>。</h5>
+							<button type="button" class="btn btn-sm btn-default btn-block" id="scale-geoms-clear">清除所有对象</button>
+							<h5 class='not-first'>更改您的世界单位,使比例参考物大小保持相关性</h5>
 							<div class="btn-group btn-block" id="scale-geoms-scale">
-								<button type="button" class="btn btn-sm btn-default dropdown-toggle btn-block" data-toggle="dropdown" target="meters"> Meters <span class="caret"></span>
+								<button type="button" class="btn btn-sm btn-default dropdown-toggle btn-block" data-toggle="dropdown" target="meters"> 米 <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu btn-block" role="menu">
-									<li><a href="#meters">Meters</a></li>
-									<li><a href="#feet">Feet</a></li>
-									<li><a href="#inches">Inches</a></li>
+									<li><a href="#meters">米</a></li>
+									<li><a href="#feet">英尺</a></li>
+									<li><a href="#inches">英寸</a></li>
 								</ul>
 							</div>
 						</div>
@@ -126,28 +119,28 @@
 
 				<div class="section">
 					<div class="p-head">
-						<h3>Camera</h3>
+						<h3>相机</h3>
 					</div>
 					<div class="p-body">
 						<div class="labeled-controls">
-							<h4>Type</h4>
-							<h5>Perspective camera provides a 3D view, while orthographic and top-view cameras provide an ortho views</h5>
+							<h4>类型</h4>
+							<h5>透视相机提供3D视图,而正交和俯视相机提供正交视图</h5>
 							<div class="btn-group btn-group-sm btn-block" id="camera-type-group">
-								<button type="button" class="btn btn-default" id="perspective">Perspective</button>
-								<button type="button" class="btn btn-default" id="ortho">Orthographic</button>
-								<button type="button" class="btn btn-default" id="top-view">Top-View</button>
+								<button type="button" class="btn btn-default" id="perspective">透视</button>
+								<button type="button" class="btn btn-default" id="ortho">正交</button>
+								<button type="button" class="btn btn-default" id="top-view">俯视</button>
 							</div>
-							<h4 class="not-first">Reset</h4>
-							<h5>Take view back to its initial state</h5>
-							<button type="button" class="btn btn-sm btn-default btn-block" id="camera-reset">Reset View</button>
-							<h4 class="not-first">Field of View</h4>
-							<h5>Changing Field of View provides interesting effects, only applies to Perspective Cameras</h5>
+							<h4 class="not-first">重置</h4>
+							<h5>将视图恢复到初始状态</h5>
+							<button type="button" class="btn btn-sm btn-default btn-block" id="camera-reset">重置视图</button>
+							<h4 class="not-first">视场角</h4>
+							<h5>更改视场角可以产生有趣的效果,仅适用于透视相机</h5>
 							<div id="fov"></div>
 						</div>
 
 						<div class="labeled-controls">
-							<h4>Clipping Regions</h4>
-							<h5>Choose alternate ways of viewing data</h5>
+							<h4>裁剪区域</h4>
+							<h5>选择查看数据的其他方式</h5>
 							<div id="clipping-regions"></div>
 						</div>
 					</div>
@@ -155,44 +148,44 @@
 
 				<div class="section">
 					<div class="p-head">
-						<h3>Data</h3>
+						<h3>数据</h3>
 					</div>
 					<div class="p-body">
 						<div class="labeled-controls" id="points-list">
-							<h4>Measurement</h4>
-							<h5>Measurement segments currently in view area</h5>
-							<button type="button" class="btn btn-sm btn-default btn-block" id="mensuration-reset">Reset</button>
+							<h4>测量</h4>
+							<h5>当前视图区域中的测量段</h5>
+							<button type="button" class="btn btn-sm btn-default btn-block" id="mensuration-reset">重置</button>
 							<div id="points-list-table">
 							</div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Particle Size</h4>
-							<h5>Larger sizes fill in the display</h5>
+							<h4>粒子大小</h4>
+							<h5>较大的尺寸会填充显示</h5>
 							<div id="pointsize"></div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Z-Exaggeration</h4>
-							<h5>Higher values make elevation deltas more apparent</h5>
+							<h4>高度夸张</h4>
+							<h5>较高的值使高程差异更加明显</h5>
 							<div id="zscale"></div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Colorization</h4>
-							<h5>Choose an attribute to colorize</h5>
+							<h4>着色</h4>
+							<h5>选择要着色的属性</h5>
 							<div class="btn-group btn-block" id="colorsource">
 								<button type="button" class="btn btn-sm btn-default btn-block dropdown-toggle" data-toggle="dropdown" target="rgb">
 									RGB <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu btn-block" role="menu">
 									<li><a href="#rgb">RGB</a></li>
-									<li><a href="#classification">Classification</a></li>
-									<li><a class="default-if-no-color" href="#heightmap-color">Heightmap Color</a></li>
-									<li><a href="#heightmap-color-inv">Heightmap Color Inverted</a></li>
+									<li><a href="#classification">分类</a></li>
+									<li><a class="default-if-no-color" href="#heightmap-color">高程图着色</a></li>
+									<li><a href="#heightmap-color-inv">高程图着色(反转)</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Colormap</h4>
-							<h5>Color gradient values used for Heightmap Color and Classification color sources</h5>
+							<h4>色图</h4>
+							<h5>用于高程图着色和分类着色的颜色渐变值</h5>
 							<div class='btn-group btn-group-justified' id="colorSwatches">
 								<a type="button" class="btn btn-default btn-sm">
 									<img src="colormaps/blue-red.png" width="100%" height="10">
@@ -222,31 +215,31 @@
 							<div id="colormapClamp"></div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Intensity Source</h4>
-							<h5>Color modulators, modulation can be played with</h5>
+							<h4>强度来源</h4>
+							<h5>颜色调制器,可以调整调制</h5>
 							<div class="btn-group btn-block" id="intensitysource">
 								<button type="button" class="btn btn-sm btn-default btn-block dropdown-toggle" data-toggle="dropdown" target="intensity">
-									Intensity <span class="caret"></span>
+									强度 <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu btn-block" role="menu">
-									<li><a href="#intensity">Intensity</a></li>
-									<li><a href="#heightmap">Heightmap Grayscale</a></li>
-									<li><a href="#heightmap-inv">Heightmap Grayscale Inverted</a></li>
+									<li><a href="#intensity">强度</a></li>
+									<li><a href="#heightmap">高程图灰度</a></li>
+									<li><a href="#heightmap-inv">高程图灰度(反转)</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Intensity Blending</h4>
-							<h5>How much of intensity to blend with color</h5>
+							<h4>强度混合</h4>
+							<h5>与颜色混合的强度比例</h5>
 							<div id="blending"></div>
 							<div class="clearfix blend-factor">
-								<div class="pull-left">All Color</div>
-								<div class="pull-right">All Intensity</div>
+								<div class="pull-left">全部颜色</div>
+								<div class="pull-right">全部强度</div>
 							</div>
 						</div>
 						<div class="labeled-controls">
-							<h4>Intensity Scaling</h4>
-							<h5>Narrow down on a range of intensity values, only applies to intensity values fetch from point source</h5>
+							<h4>强度缩放</h4>
+							<h5>缩小强度值范围,仅适用于从点源获取的强度值</h5>
 							<div id="intensity"></div>
 						</div>
 					</div>
@@ -254,12 +247,12 @@
 
 				<div class="section">
 					<div class="p-head">
-						<h3>Utilities</h3>
+						<h3>工具</h3>
 					</div>
 					<div class="p-body">
 						<div class="labeled-controls">
-							<h4>Inundation</h4>
-							<h5>Enable an Inundation Plane and manipulate it using a slider</h5>
+							<h4>淹没</h4>
+							<h5>启用淹没平面并使用滑块进行操作</h5>
 							<div id="inun-container"></div>
 						</div>
 					</div>
@@ -269,106 +262,91 @@
 
 		<div id="listener"></div>
 
-		<!-- Modal -->
+		<!-- 模态框 -->
 		<div class="modal fade" id="creditsPage" tabindex="-1" role="dialog" aria-labelledby="creditsPageModal" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						 <h4 class="modal-title">plas.io Data Credits</h4>
-
+						 <h4 class="modal-title">plas.io 数据来源</h4>
 					</div>
 					<div class="modal-body">
-						<h4>The following data files are to be credited by their original source</h4>
+						<h4>以下数据文件的原始来源应得到认可</h4>
 						<ul>
-							<li>Autzen Stadium -- <a href="http://www.linkedin.com/pub/aaron-reyna/82/619/894">Aaron Reyna</a>, <a href="http://www.watershedsciences.com/">Watershed Sciences, Inc.</a>
+							<li>奥茨恩体育场 -- <a href="http://www.linkedin.com/pub/aaron-reyna/82/619/894">Aaron Reyna</a>, <a href="http://www.watershedsciences.com/">Watershed Sciences, Inc.</a>
 							</li>
-							<li>St. Helens -- <a href="http://www.linkedin.com/in/howardbutler">Howard Butler</a>, <a href="http://hobu.co">Hobu, Inc.</a>. USGS LiDAR + NAIP.
+							<li>圣海伦斯山 -- <a href="http://www.linkedin.com/in/howardbutler">Howard Butler</a>, <a href="http://hobu.co">Hobu, Inc.</a>. USGS LiDAR + NAIP.
 							</li>
-							<li>Half Dome -- <a href="http://www.linkedin.com/in/howardbutler">Howard Butler</a>, <a href="http://hobu.co">Hobu, Inc.</a> USGS LiDAR + NAIP.
+							<li>半穹顶 -- <a href="http://www.linkedin.com/in/howardbutler">Howard Butler</a>, <a href="http://hobu.co">Hobu, Inc.</a> USGS LiDAR + NAIP.
 							</li>
-
-							<li>Space Shuttle -- Data courtesy of the Smithsonian National Air and Space Museum, Steven F. Udvar-Hazy Center and the U.S. Army Corps of Engineers,  <a href="http://www.crrel.usace.army.mil/">Cold Regions Research and Engineering Laboratory</a>.
+							<li>航天飞机 -- 数据由史密森尼国家航空航天博物馆、史蒂文·F·乌德瓦尔-哈齐中心和美国陆军工程兵团提供, <a href="http://www.crrel.usace.army.mil/">冷区研究与工程实验室</a>.
 							</li>
-                            <li>Cedar Falls, IA University Ave -- Iowa DOT</li>
+							<li>爱荷华锡达福尔斯大学大道 -- 爱荷华州交通部</li>
 						</ul>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 					</div>
 				</div>
-				<!-- /.modal-content -->
 			</div>
-			<!-- /.modal-dialog -->
 		</div>
 
-		<!-- Modal -->
+		<!-- 模态框 -->
 		<div class="modal fade" id="openGreyhoundModal" tabindex="-1" role="dialog" aria-labelledby="openGreyhoundPage" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						 <h4 class="modal-title">Open a Greyhound source</h4>
-
+						 <h4 class="modal-title">打开Greyhound源</h4>
 					</div>
 					<div class="modal-body ui-panel">
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Open Pipeline</button>
+						<button type="button" class="btn btn-warning" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">打开管道</button>
 					</div>
 				</div>
-				<!-- /.modal-content -->
 			</div>
-			<!-- /.modal-dialog -->
 		</div>
 
-
-
-		<!-- Modal -->
+		<!-- 模态框 -->
 		<div class="modal fade" id="scalesPage" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="scalesPageLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						 <h4 class="modal-title">Specify Projection</h4>
+						 <h4 class="modal-title">指定投影</h4>
 					</div>
 					<div class="modal-body">
 						<div style='text-align: center;padding-bottom: 10px;'>
-							<h4 style="font-weight: bold">The data doesn't appear to be in a projected coordinate space.</h4>
-							<h4 style="color:#999">Please indicate what you'd like to do:</h4>
+							<h4 style="font-weight: bold">数据似乎不在投影坐标空间中。</h4>
+							<h4 style="color:#999">请指明您想要做什么：</h4>
 						</div>
-						<button type="button" class="btn btn-primary btn-lg btn-block" data-value="0">Leave as is</button>
-						<button type="button" class="btn btn-success btn-lg btn-block" data-value="1">Scale X/Y to Meters, Z is in Meters</button>
-						<button type="button" class="btn btn-info btn-lg btn-block" data-value="2">Scale X/Y to Meters, Z is in Feet</button>
+						<button type="button" class="btn btn-primary btn-lg btn-block" data-value="0">保持原样</button>
+						<button type="button" class="btn btn-success btn-lg btn-block" data-value="1">将X/Y缩放为米,Z为米</button>
+						<button type="button" class="btn btn-info btn-lg btn-block" data-value="2">将X/Y缩放为米,Z为英尺</button>
 					</div>
 					<div class="modal-footer">
-						<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
 					</div>
 				</div>
-				<!-- /.modal-content -->
 			</div>
-			<!-- /.modal-dialog -->
 		</div>
 
-		<!-- Modal -->
+		<!-- 模态框 -->
 		<div class="modal fade" id="docsPage" tabindex="-1" role="dialog" aria-labelledby="scalesPageLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title">plasio Documentation</h4>
+						<h4 class="modal-title">plasio 文档</h4>
 					</div>
 					<div class="modal-body">
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 					</div>
 				</div>
-				<!-- /.modal-content -->
 			</div>
-			<!-- /.modal-dialog -->
 		</div>
-
 
 		<script src="bad.js"></script>
 		<script src="client.js"></script>
